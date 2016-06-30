@@ -1,37 +1,47 @@
-Flexbox Grid
+### Fork from https://github.com/hugeinc/flexboxgrid-sass
+------
+
+Flexbox Grid Sass
 ===========
+This work is an adaptation from the original [Flexbox Grid](http://flexboxgrid.com/) created by @kristoferjoseph.
 
-[flexboxgrid.com](http://flexboxgrid.com)
+Grid based on the `flex` display property. [Check the documentation](http://hugeinc.github.io/flexboxgrid-sass)
 
-Grid based on the `flex` display property.
+About
+------
+By trying the [Flexbox Grid](http://flexboxgrid.com/) we saw the internal need to a SASS version of it. Thanks to the good work of Kristopher Joseph, we forked his project and sassified it.
 
 Install
 ---------
 ### npm
-`npm i flexboxgrid --save`
+`npm i flexboxgrid-sass --save`
 
 ### bower
-`bower install flexboxgrid`
+`bower install --save flexboxgrid-sass`
 
-### cdn
-```
-<link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/6.1.1/flexboxgrid.min.css" type="text/css" />
-```
+Use
+---------
+To modify the Flexbox grid, declare the following variables on your layout .scss
 
-### css
-* [Development](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/dist/flexboxgrid.css)
-* [Production](https://raw.githubusercontent.com/kristoferjoseph/flexboxgrid/master/dist/flexboxgrid.min.css)
+#### Set the number of columns you want to use on your layout.
+`$grid-columns: 12;`
 
-Add the `flexbox.css` __development__ or `flexbox.min.css` __production__ to your html page.
+#### Set the gutter between columns.
+
+`$gutter-width: 1rem;`
+
+#### Set a margin for the container sides.
+
+`$outer-margin: 1rem;`
+
+####  Create or remove breakpoints for your project
+You can modify, remove or create breakpoints before generate the final CSS.
 
 ```
-<link rel="stylesheet" href="css/flexbox.min.css" type="text/css" />
+$breakpoints:
+  sm 48rem,
+  md 64rem,
+  lg 80rem,
+  xlg 90rem,
+  newbreakpoint 120rem;
 ```
-Inspiration
------------
-- [topcoat-grid](https://github.com/topcoat/grid)
-- [flexbox-grid by @zeMicro](https://github.com/zeMirco/flexbox-grid)
-- [ptb2.me/flexgrid](http://ptb2.me/flexgrid/)
-- [codepen.io/marcolago/pen/lqGFb](http://codepen.io/marcolago/pen/lqGFb)
-- [philipwalton.github.io/solved-by-flexbox/demos/grids](http://philipwalton.github.io/solved-by-flexbox/demos/grids/)
-- [davidwalsh.name/stylus-grid](http://davidwalsh.name/stylus-grid)
